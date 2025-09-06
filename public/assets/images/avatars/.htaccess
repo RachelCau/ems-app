@@ -1,0 +1,19 @@
+# Allow access to all files in this directory
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+</IfModule>
+
+# Enable directory listing
+Options +Indexes
+
+# Handle images properly
+<IfModule mod_mime.c>
+    AddType image/jpeg jpg jpeg
+    AddType image/png png
+    AddType image/webp webp
+    AddType image/gif gif
+</IfModule> 

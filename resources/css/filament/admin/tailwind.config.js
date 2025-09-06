@@ -1,0 +1,60 @@
+module.exports = {
+    presets: [
+        require("../../../../vendor/filament/filament/tailwind.config.js")
+    ],
+    content: [
+      './app/Filament/**/*.php',
+      './resources/views/filament/**/*.blade.php',
+      './vendor/filament/**/*.blade.php',
+    ],
+    theme: {
+        extend: {
+            colors: {
+                'primary-50': 'rgb(var(--primary-50))',
+                'primary-100': 'rgb(var(--primary-100))',
+                'primary-200': 'rgb(var(--primary-200))',
+                'primary-300': 'rgb(var(--primary-300))',
+                'primary-400': 'rgb(var(--primary-400))',
+                'primary-500': 'rgb(var(--primary-500))',
+                'primary-600': 'rgb(var(--primary-600))',
+                'primary-700': 'rgb(var(--primary-700))',
+                'primary-800': 'rgb(var(--primary-800))',
+                'primary-900': 'rgb(var(--primary-900))',
+                'primary-950': 'rgb(var(--primary-950))',
+                'danger-50': 'rgb(var(--danger-50))',
+                'danger-100': 'rgb(var(--danger-100))',
+                'danger-200': 'rgb(var(--danger-200))',
+                'danger-300': 'rgb(var(--danger-300))',
+                'danger-400': 'rgb(var(--danger-400))',
+                'danger-500': 'rgb(var(--danger-500))',
+                'danger-600': 'rgb(var(--danger-600))',
+                'danger-700': 'rgb(var(--danger-700))',
+                'danger-800': 'rgb(var(--danger-800))',
+                'danger-900': 'rgb(var(--danger-900))',
+                'danger-950': 'rgb(var(--danger-950))',
+                'success-50': 'rgb(var(--success-50))',
+                'success-100': 'rgb(var(--success-100))',
+                'success-200': 'rgb(var(--success-200))',
+                'success-300': 'rgb(var(--success-300))',
+                'success-400': 'rgb(var(--success-400))',
+                'success-500': 'rgb(var(--success-500))',
+                'success-600': 'rgb(var(--success-600))',
+                'success-700': 'rgb(var(--success-700))',
+                'success-800': 'rgb(var(--success-800))',
+                'success-900': 'rgb(var(--success-900))',
+                'success-950': 'rgb(var(--success-950))',
+                'warning-50': 'rgb(var(--warning-50))',
+                'warning-100': 'rgb(var(--warning-100))',
+                'warning-200': 'rgb(var(--warning-200))',
+                'warning-300': 'rgb(var(--warning-300))',
+                'warning-400': 'rgb(var(--warning-400))',
+                'warning-500': 'rgb(var(--warning-500))',
+                'warning-600': 'rgb(var(--warning-600))',
+                'warning-700': 'rgb(var(--warning-700))',
+                'warning-800': 'rgb(var(--warning-800))',
+                'warning-900': 'rgb(var(--warning-900))',
+                'warning-950': 'rgb(var(--warning-950))',
+            }
+        }
+    }
+}; 

@@ -1,0 +1,4 @@
+PROGRAM,CODE,COURSE,UNIT,TYPE,PREREQUISITE,LEVEL,SEMESTER
+BSIT,IT101,Introduction to Information Technology,3,GEN_ED,,1,1
+BSIT,IT102,Computer Programming 1,3,TECH_SKILL,,1,1
+"BSIT,BSCS",CS101,Data Structures and Algorithms,3,TECH_SKILL,IT102,1,2

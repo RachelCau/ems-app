@@ -1,0 +1,204 @@
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Application Wizard Styles - Dark Theme */
+.filament-form-wizard-component .filament-forms-wizard-component {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1a1a1a;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Style the steps header */
+.filament-form-wizard-component .filament-forms-wizard-header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+/* Style wizard step indicators */
+.filament-form-wizard-component .filament-forms-wizard-step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    border: 2px solid #333;
+    position: relative;
+    z-index: 1;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step[aria-current="true"] .filament-forms-wizard-step-icon-container {
+    background-color: transparent;
+    border: 2px solid #f59e0b;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step[aria-current="true"] .filament-forms-wizard-step-icon {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-icon {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-label {
+    color: #aaa;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step[aria-current="true"] .filament-forms-wizard-step-label {
+    color: #f59e0b;
+}
+
+/* Style the connecting lines between steps */
+.filament-form-wizard-component .filament-forms-wizard-step-connector {
+    height: 2px;
+    background-color: #333;
+    flex-grow: 1;
+    margin: 0 -1rem;
+    position: relative;
+    top: -25px;
+    z-index: 0;
+}
+
+/* Style the content area */
+.filament-form-wizard-component .filament-forms-wizard-step-content {
+    min-height: 400px;
+    height: auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+}
+
+/* Style form fields */
+.filament-form-wizard-component .filament-forms-field-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.filament-form-wizard-component input,
+.filament-form-wizard-component select,
+.filament-form-wizard-component textarea {
+    background-color: #222 !important;
+    border: 1px solid #333 !important;
+    color: #fff !important;
+    border-radius: 0.375rem !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.filament-form-wizard-component label {
+    color: #ddd !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+}
+
+/* Style the buttons area */
+.filament-form-wizard-component .filament-forms-wizard-step-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #f59e0b;
+    color: #000;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-button:hover {
+    background-color: #d97706;
+}
+
+.filament-form-wizard-component .filament-forms-wizard-step-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.5);
+}
+
+/* Placeholder color */
+.filament-form-wizard-component input::placeholder,
+.filament-form-wizard-component textarea::placeholder {
+    color: #666 !important;
+}
+
+/* Submit button */
+.application-submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #f59e0b;
+    color: #000;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.application-submit-button:hover {
+    background-color: #d97706;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filament-form-wizard-component .filament-forms-wizard-component {
+        max-width: 100%;
+    }
+    
+    .filament-form-wizard-component .filament-forms-wizard-step-content {
+        min-height: 300px;
+        padding: 1rem;
+    }
+    
+    .filament-form-wizard-component .filament-forms-wizard-header {
+        padding: 1rem 0.5rem;
+    }
+    
+    .filament-form-wizard-component .filament-forms-wizard-step-indicator {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Add your custom styles here */
+
+/* Room Form Styling */
+.filament-page[class*="app-filament-resources-room-resource"] .filament-form-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filament-page[class*="app-filament-resources-room-resource"] .filament-form-actions .filament-button {
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.filament-page[class*="app-filament-resources-room-resource"] .filament-button-create {
+    background-color: #00cea6 !important;
+}

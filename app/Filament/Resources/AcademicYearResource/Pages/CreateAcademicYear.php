@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Filament\Resources\AcademicYearResource\Pages;
+
+use App\Filament\Resources\AcademicYearResource;
+use Filament\Actions;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreateAcademicYear extends CreateRecord
+{
+    protected static string $resource = AcademicYearResource::class;
+    
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    
+    protected function getCreatedNotificationTitle(): ?string
+    {
+        return "Academic year '{$this->record->name}' has been created successfully";
+    }
+} 

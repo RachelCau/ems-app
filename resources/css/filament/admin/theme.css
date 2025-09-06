@@ -1,0 +1,27 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@config './tailwind.config.js';
+
+@layer base {
+    :root {
+        --font-family: Inter, system-ui, sans-serif;
+    }
+}
+
+/* Custom sidebar styles */
+@layer components {
+    .fi-sidebar {
+        padding-top: 0.5rem;
+    }
+    
+    .fi-sidebar-header {
+        height: 4.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .fi-sidebar-nav {
+        padding-top: 1.5rem;
+    }
+} 

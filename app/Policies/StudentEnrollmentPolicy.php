@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Policies;
+
+use App\Models\StudentEnrollment;
+use App\Models\User;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class StudentEnrollmentPolicy
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine whether the user can view any models.
+     */
+    public function viewAny(User $user): bool
+    {
+        return $user->hasPermissionTo('view student enrollments');
+    }
+
+    /**
+     * Determine whether the user can view the model.
+     */
+    public function view(User $user, StudentEnrollment $studentEnrollment): bool
+    {
+        return $user->hasPermissionTo('view student enrollments');
+    }
+
+    /**
+     * Determine whether the user can create models.
+     */
+    public function create(User $user): bool
+    {
+        return $user->hasPermissionTo('create student enrollments');
+    }
+
+    /**
+     * Determine whether the user can update the model.
+     */
+    public function update(User $user, StudentEnrollment $studentEnrollment): bool
+    {
+        return $user->hasPermissionTo('edit student enrollments');
+    }
+
+    /**
+     * Determine whether the user can delete the model.
+     */
+    public function delete(User $user, StudentEnrollment $studentEnrollment): bool
+    {
+        return $user->hasPermissionTo('delete student enrollments');
+    }
+
+    /**
+     * Determine whether the user can restore the model.
+     */
+    public function restore(User $user, StudentEnrollment $studentEnrollment): bool
+    {
+        return $user->hasPermissionTo('edit student enrollments');
+    }
+
+    /**
+     * Determine whether the user can permanently delete the model.
+     */
+    public function forceDelete(User $user, StudentEnrollment $studentEnrollment): bool
+    {
+        return $user->hasPermissionTo('delete student enrollments');
+    }
+} 
